@@ -11,7 +11,7 @@ import UIKit
 class View: UIView {
     
     // MARK: Properties
-
+    let char = InputLabel()
     
     // MARK: Inits
     convenience init() {
@@ -35,10 +35,16 @@ class View: UIView {
     }
     
     func configureSubviews(){
-
+        self.backgroundColor = UIColor.whiteColor()
+        
+        addSubview(char)
     }
     
     func applyConstraints() {
-
+        char.addConstraints(
+            Constraint.cxcx.of(self),
+            Constraint.cycy.of(self),
+            Constraint.wh.of(300)
+        )
     }
 }

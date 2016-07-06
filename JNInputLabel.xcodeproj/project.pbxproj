@@ -14,6 +14,7 @@
 		819E5BB31D2C5D49009E568A /* APConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E5BB21D2C5D49009E568A /* APConstraints.swift */; };
 		819E5BB61D2C5D7E009E568A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E5BB51D2C5D7E009E568A /* View.swift */; };
 		819E5BB81D2C5DE3009E568A /* InputCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E5BB71D2C5DE3009E568A /* InputCharacter.swift */; };
+		819E5BBA1D2C8136009E568A /* InputLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E5BB91D2C8136009E568A /* InputLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		819E5BB21D2C5D49009E568A /* APConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APConstraints.swift; sourceTree = "<group>"; };
 		819E5BB51D2C5D7E009E568A /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		819E5BB71D2C5DE3009E568A /* InputCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCharacter.swift; sourceTree = "<group>"; };
+		819E5BB91D2C8136009E568A /* InputLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				819E5BA21D2C5CF7009E568A /* ViewController.swift */,
 				819E5BB51D2C5D7E009E568A /* View.swift */,
 				819E5BB71D2C5DE3009E568A /* InputCharacter.swift */,
+				819E5BB91D2C8136009E568A /* InputLabel.swift */,
 				819E5BB41D2C5D65009E568A /* Utilities */,
 				819E5BA71D2C5CF7009E568A /* Assets.xcassets */,
 				819E5BA91D2C5CF7009E568A /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				819E5BB61D2C5D7E009E568A /* View.swift in Sources */,
+				819E5BBA1D2C8136009E568A /* InputLabel.swift in Sources */,
 				819E5BB81D2C5DE3009E568A /* InputCharacter.swift in Sources */,
 				819E5BB31D2C5D49009E568A /* APConstraints.swift in Sources */,
 				819E5BA31D2C5CF7009E568A /* ViewController.swift in Sources */,

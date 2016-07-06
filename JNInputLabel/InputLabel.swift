@@ -1,5 +1,5 @@
 //
-//  InputCharacter.swift
+//  InputLabel.swift
 //  JNInputLabel
 //
 //  Created by Joey Nelson on 7/5/16.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-class InputCharacter : UIView {
+class InputLabel : UIView {
     
     // MARK: Properties
-    let character = UILabel()
-    let underline = UIView()
+    var currentInput: String = ""
+    var inputCharacters = [InputCharacter]()
     
+    internal var inputLength: Int = 10
     internal var characterSize: CGFloat = 18
     
     // MARK: Inits
@@ -38,24 +39,22 @@ class InputCharacter : UIView {
     }
     
     func configureSubviews() {
-        character.textAlignment = .Center
-        
-        addSubview(character)
-        addSubview(underline)
+        for _ in 1...inputLength {
+            let newInput = InputCharacter()
+            newInput.character.text = "0"
+            newInput.underline.backgroundColor = UIColor.blueColor()
+            inputCharacters.append(newInput)
+        }
     }
     
     func applyConstraints() {
-        character.addConstraints(
-            Constraint.cxcx.of(self),
-            Constraint.cycy.of(self),
-            Constraint.wh.of(characterSize)
-        )
-        
-        underline.addConstraints(
-            Constraint.cxcx.of(self),
-            Constraint.tb.of(character, offset: 3),
-            Constraint.w.of(characterSize),
-            Constraint.h.of(characterSize/10)
-        )
+        for (index, input) in inputCharacters.enumerate() {
+            addSubview(input)
+            input.addConstraints(
+                Constraint.cycy.of(self),
+                Constraint.ll.of(self, offset: CGFloat(index) * characterSize),
+                Constraint.wh.of(characterSize)
+            )
+        }
     }
 }
