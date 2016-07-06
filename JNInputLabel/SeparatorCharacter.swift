@@ -1,21 +1,31 @@
 //
-//  View.swift
+//  SeparatorCharacter.swift
 //  JNInputLabel
 //
-//  Created by Joey Nelson on 7/5/16.
+//  Created by Joey Nelson on 7/6/16.
 //  Copyright © 2016 Joey Nelson. All rights reserved.
 //
 
 import UIKit
 
-class View: UIView {
+class SeparatorCharacter : UIView {
     
     // MARK: Properties
-    let char = InputLabel()
+    let character = UILabel()
+    
+    internal var characterSize: CGFloat = 18
     
     // MARK: Inits
     convenience init() {
         self.init(frame: CGRectZero)
+    }
+    
+    convenience init(textAlignment: NSTextAlignment, char: String, font: UIFont, size: CGFloat) {
+        self.init()
+        character.textAlignment = textAlignment
+        character.text = char
+        character.font = font
+        characterSize = size
     }
     
     override init(frame: CGRect) {
@@ -34,17 +44,16 @@ class View: UIView {
         applyConstraints()
     }
     
-    func configureSubviews(){
-        self.backgroundColor = UIColor.whiteColor()
-        
-        addSubview(char)
+    func configureSubviews() {
+        addSubview(character)
     }
     
     func applyConstraints() {
-        char.addConstraints(
-            Constraint.llrr.of(self, offset: 30),
+        character.addConstraints(
+            Constraint.cxcx.of(self),
             Constraint.cycy.of(self),
-            Constraint.h.of(50)
+            Constraint.h.of(characterSize),
+            Constraint.w.of(characterSize)
         )
     }
 }
